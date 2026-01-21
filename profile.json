@@ -1,0 +1,69 @@
+{
+    "$schema": "https://raw.githubusercontent.com/qgis-deployment/qgis-deployment-toolbelt-cli/main/docs/schemas/profile/qgis_profile.json",
+    "name": "default",
+    "folder_name": "default",
+    "description": "",
+    "email": "tom.ford@space-intelligence.com",
+    "icon": "TDB",
+    "qgisMinimumVersion": "",
+    "qgisMaximumVersion": "",
+    "version": "",
+    "plugins": [
+        {
+            "name": "Lat Lon Tools",
+            "folder_name": "latlontools",
+            "official_repository": true,
+            "plugin_id": 1035,
+            "version": "3.7.4"
+        },
+        {
+            "name": "MapBiomas Collection Official",
+            "folder_name": "plugin",
+            "official_repository": true,
+            "plugin_id": 2806,
+            "version": "1.6.3"
+        },
+        {
+            "name": "Maps Printer",
+            "folder_name": "MapsPrinter",
+            "official_repository": true,
+            "plugin_id": 578,
+            "version": "1.0"
+        },
+        {
+            "name": "Plugin Reloader",
+            "folder_name": "plugin_reloader",
+            "official_repository": true,
+            "plugin_id": 143,
+            "version": "0.18"
+        },
+        {
+            "name": "Profile Manager",
+            "folder_name": "profile_manager",
+            "official_repository": true,
+            "plugin_id": 3547,
+            "version": "0.7.2"
+        },
+        {
+            "name": "QuickMapServices",
+            "folder_name": "quick_map_services",
+            "official_repository": true,
+            "plugin_id": 663,
+            "version": "0.21.4"
+        },
+        {
+            "name": "Send2GE",
+            "folder_name": "send2google_earth",
+            "official_repository": true,
+            "plugin_id": 378,
+            "version": "0.4.0"
+        },
+        {
+            "name": "Value Tool",
+            "folder_name": "valuetool",
+            "official_repository": true,
+            "plugin_id": 32,
+            "version": "3.1.0"
+        }
+    ]
+}
