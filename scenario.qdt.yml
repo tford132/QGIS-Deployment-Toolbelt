@@ -4,20 +4,22 @@ metadata:
   version: "1.0.0"
 
 jobs:
-  # 1. Download the profile you created
+  # 1. Downloads the profile into ~/Library/Application Support/QGIS/QGIS3/profiles/
   - name: profiles-downloader
     options:
-      source: "N:/IT/GIS_Deploy/profile.json" # Link to your hosted file
+      source: "https://raw.githubusercontent.com/tford132/QGIS-Deployment-Toolbelt/main/profile.json"
 
-  # 2. Sync the plugins listed in that profile
+  # 2. Downloads plugins defined in that JSON into the profile's python/plugins folder
   - name: plugins-synchronizer
     options:
       action: "sync"
 
-  # 3. Create a custom Windows shortcut for the user
+  # 3. macOS Path Definition (Tells QDT where the app lives)
   - name: shortcuts-manager
     options:
       shortcuts:
         - name: "Company QGIS"
+          # Ensure this path is exactly where your QGIS is installed
+          exec_path: "/Applications/QGIS-LTR 2.app/Contents/MacOS/QGIS"
           profile: "Company_Standard"
-          icon: "N:/IT/GIS_Deploy/logo.ico"
+          icon: "/Users/thomasford/Downloads/20241216_151541.jpg"
