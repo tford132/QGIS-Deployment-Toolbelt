@@ -1,7 +1,7 @@
 {
     "$schema": "https://raw.githubusercontent.com/qgis-deployment/qgis-deployment-toolbelt-cli/main/docs/schemas/profile/qgis_profile.json",
     "name": "Company QGIS",
-    "folder_name": "default",
+    "folder_name": "Company_Standard",
     "description": "",
     "email": "tom.ford@space-intelligence.com",
     "icon": "TDB",
