@@ -1,0 +1,23 @@
+# scenario.qdt.yml
+metadata:
+  name: "Corporate QGIS Setup"
+  version: "1.0.0"
+
+jobs:
+  # 1. Download the profile you created
+  - name: profiles-downloader
+    options:
+      source: "N:/IT/GIS_Deploy/profile.json" # Link to your hosted file
+
+  # 2. Sync the plugins listed in that profile
+  - name: plugins-synchronizer
+    options:
+      action: "sync"
+
+  # 3. Create a custom Windows shortcut for the user
+  - name: shortcuts-manager
+    options:
+      shortcuts:
+        - name: "Company QGIS"
+          profile: "Company_Standard"
+          icon: "N:/IT/GIS_Deploy/logo.ico"
