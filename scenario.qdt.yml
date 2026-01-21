@@ -3,23 +3,26 @@ metadata:
   name: "Corporate QGIS Setup"
   version: "1.0.0"
 
-jobs:
-  # 1. Downloads the profile into ~/Library/Application Support/QGIS/QGIS3/profiles/
+# This block is now required in 0.40.0
+settings:
+  allow_pre_releases: false
+
+steps:
+  # 1. Download the profile
   - name: profiles-downloader
     options:
       source: "https://raw.githubusercontent.com/tford132/QGIS-Deployment-Toolbelt/main/profile.json"
 
-  # 2. Downloads plugins defined in that JSON into the profile's python/plugins folder
+  # 2. Sync the plugins
   - name: plugins-synchronizer
     options:
       action: "sync"
 
-  # 3. macOS Path Definition (Tells QDT where the app lives)
+  # 3. Define the QGIS environment for macOS
   - name: shortcuts-manager
     options:
       shortcuts:
         - name: "Company QGIS"
-          # Ensure this path is exactly where your QGIS is installed
           exec_path: "/Applications/QGIS-LTR 2.app/Contents/MacOS/QGIS"
           profile: "Company_Standard"
           icon: "/Users/thomasford/Downloads/20241216_151541.jpg"
